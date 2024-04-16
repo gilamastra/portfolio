@@ -11,183 +11,211 @@
 </head>
 
 <body>
-   <nav id="desktop-nav">
-      <div class="logo">Giovani Lamastra</div>
-      <div>
-         <ul class="nav-links">
-            <li><a class="navAboutText" id="navAboutText" href="#about" onclick="toggleMenu()"></a></li>
-            <li><a class="navExperienceText" href="#experience" onclick="toggleMenu()"></a></li>
-            <li><a class="navProjectsText" href="#projects" onclick="toggleMenu()"></a></li>
-            <li><a class="navContactText" href="#contact" onclick="toggleMenu()"></a></li>
-         </ul>
-      </div>
-      <div class="styled-select">
-         <select name="languages" id="languages" onchange="updateLanguage()">
-         </select>
-      </div>
+   <div id="loading-spinner"></div>
+   <div id="content" style="opacity: 0;">
+
+      <nav id="desktop-nav">
+         <div class="logo">Giovani Lamastra</div>
+         <div>
+            <ul class="nav-links">
+               <li><a class="navAboutText" id="navAboutText" href="#about" onclick="toggleMenu()"></a></li>
+               <li><a class="navExperienceText" href="#experience" onclick="toggleMenu()"></a></li>
+               <li><a class="navProjectsText" href="#projects" onclick="toggleMenu()"></a></li>
+               <li><a class="navContactText" href="#contact" onclick="toggleMenu()"></a></li>
+            </ul>
+         </div>
+         <div class="styled-select">
+            <select name="languages" id="languages" onchange="updateLanguage()">
+            </select>
+         </div>
 
 
-   </nav>
-   <nav id="hamburger-nav">
-      <div class="logo">Giovani Lamastra</div>
-      <div class="hamburger-menu">
-         <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+      </nav>
+      <nav id="hamburger-nav">
+         <div class="logo">Giovani Lamastra</div>
+         <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+            <div class="menu-links">
+               <li><a class="navAboutText" href="#about" onclick="toggleMenu()"></a></li>
+               <li><a class="navExperienceText" href="#experience" onclick="toggleMenu()"></a></li>
+               <li><a class="navProjectsText" href="#projects" onclick="toggleMenu()"></a></li>
+               <li><a class="navContactText" href="#contact" onclick="toggleMenu()"></a></li>
+            </div>
          </div>
-         <div class="menu-links">
-            <li><a class="navAboutText" href="#about" onclick="toggleMenu()"></a></li>
-            <li><a class="navExperienceText" href="#experience" onclick="toggleMenu()"></a></li>
-            <li><a class="navProjectsText" href="#projects" onclick="toggleMenu()"></a></li>
-            <li><a class="navContactText" href="#contact" onclick="toggleMenu()"></a></li>
-         </div>
-      </div>
-   </nav>
-   <section id="profile">
+      </nav>
+      <section id="profile">
 
-      <div class="section__text">
-         <p id="introductionText" class="section__text__p1">Hello, I'm</p>
-         <h1 class="title">Giovani Lamastra</h1>
-         <p id="developer-role" class="section__text__p2">Frontend Developer</p>
-         <div class="btn-container">
-            <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
-               Download CV
-            </button>
-            <button class="btn btn-color-1" onclick="location.href='./#contact'">
-               Contact Info
-            </button>
-         </div>
-         <div id="socials-container">
-            <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-               onclick="location.href='https://linkedin.com/'" />
-            <img src="./assets/github.png" alt="My Github profile" class="icon"
-               onclick="location.href='https://github.com/'" />
-         </div>
-      </div>
-   </section>
-   <section class="pop" id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
 
-         <div class="about-details-container">
+
+         <div class="section__text">
+            <p id="introductionText" class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Giovani Lamastra</h1>
+            <p id="developer-role" class="section__text__p2">Frontend Developer</p>
+            <div class="btn-container">
+               <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
+                  Download CV
+               </button>
+               <button class="btn btn-color-1" onclick="location.href='#contact'">
+                  Contact Info
+               </button>
+            </div>
+            <div id="socials-container">
+               <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+                  onclick="window.open('https://www.linkedin.com/in/giovanilamastra/','_blank')" />
+               <img src="./assets/github.png" alt="My Github profile" class="icon"
+                  onclick="window.open('https://github.com/gilamastra/','_blank')" />
+            </div>
+         </div>
+
+      </section>
+      <section class="section" id="about">
+         <p class="section__text__p1">Get To Know More</p>
+         <h1 class="title">About Me</h1>
+         <div class="section-container">
+
+            <div class="about-details-container">
+               <div class="about-containers">
+                  <div class="details-container">
+                     <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+                     <h3>Experience</h3>
+                     <p>2+ years <br />Frontend Development</p>
+                  </div>
+                  <div class="details-container">
+                     <img src="./assets/education.png" alt="Education icon" class="icon" />
+                     <h3>Education</h3>
+                     <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+                  </div>
+               </div>
+               <div class="text-container">
+                  <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+                     reprehenderit et laborum, rem, dolore eum quod voluptate
+                     exercitationem nobis, nihil esse debitis maxime facere minus sint
+                     delectus velit in eos quo officiis explicabo deleniti dignissimos.
+                     Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+                     reiciendis ea magnam? Nulla, impedit fuga!
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="section" id="experience">
+         <p class="section__text__p1">Explore My</p>
+         <h1 class="title">Experience</h1>
+         <div style="height: unset;" class="experience-details-container">
             <div class="about-containers">
-               <div class="details-container">
-                  <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-                  <h3>Experience</h3>
-                  <p>2+ years <br />Frontend Development</p>
+               <div class="skills-container">
+                  <h2 class="experience-sub-title">Frontend Development</h2>
+                  <div class="article-container">
+                     <div class="skills-section">
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">Html</h3>
+                        </div>
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">Css</h3>
+                        </div>
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">React</h3>
+                        </div>
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">JavaScript</h3>
+                        </div>
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">TypeScript</h3>
+                        </div>
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">Jest</h3>
+                        </div>
+                     </div>
+                  </div>
                </div>
-               <div class="details-container">
-                  <img src="./assets/education.png" alt="Education icon" class="icon" />
-                  <h3>Education</h3>
-                  <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+               <div class="skills-container">
+                  <h2 class="experience-sub-title">Backend Development</h2>
+                  <div class="article-container">
+                     <div class="skills-section">
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">Html</h3>
+                        </div>
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">Html</h3>
+                        </div>
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">Html</h3>
+                        </div>
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">Html</h3>
+                        </div>
+                     </div>
+                  </div>
+
                </div>
-            </div>
-            <div class="text-container">
-               <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-                  reprehenderit et laborum, rem, dolore eum quod voluptate
-                  exercitationem nobis, nihil esse debitis maxime facere minus sint
-                  delectus velit in eos quo officiis explicabo deleniti dignissimos.
-                  Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-                  reiciendis ea magnam? Nulla, impedit fuga!
-               </p>
-            </div>
-         </div>
-      </div>
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
-   </section>
-   <section class="pop" id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-         <div class="about-containers">
-            <div class="details-container">
-               <h2 class="experience-sub-title">Frontend Development</h2>
-               <div class="article-container">
-                  <article>
-                     <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                     <div>
-                        <h3>HTML</h3>
-                        <p>Experienced</p>
+               <div class="skills-container">
+                  <h2 class="experience-sub-title">DevOps Development</h2>
+                  <div class="article-container">
+                     <div class="skills-section">
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">Html</h3>
+                        </div>
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">Html</h3>
+                        </div>
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">Html</h3>
+                        </div>
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">Html</h3>
+                        </div>
                      </div>
-                  </article>
-                  <article>
-                     <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                     <div>
-                        <h3>CSS</h3>
-                        <p>Experienced</p>
-                     </div>
-                  </article>
-                  <article>
-                     <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                     <div>
-                        <h3>SASS</h3>
-                        <p>Intermediate</p>
-                     </div>
-                  </article>
-                  <article>
-                     <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                     <div>
-                        <h3>JavaScript</h3>
-                        <p>Basic</p>
-                     </div>
-                  </article>
-                  <article>
-                     <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                     <div>
-                        <h3>TypeScript</h3>
-                        <p>Basic</p>
-                     </div>
-                  </article>
-                  <article>
-                     <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                     <div>
-                        <h3>Material UI</h3>
-                        <p>Intermediate</p>
-                     </div>
-                  </article>
+                  </div>
+
                </div>
-            </div>
-            <div class="details-container">
-               <h2 class="experience-sub-title">Frontend Development</h2>
-               <div class="article-container">
-                  <article>
-                     <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                     <div>
-                        <h3>PostgreSQL</h3>
-                        <p>Basic</p>
+               <div class="skills-container">
+                  <h2 class="experience-sub-title">Others</h2>
+                  <div class="article-container">
+                     <div class="skills-section">
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">Html</h3>
+                        </div>
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">Html</h3>
+                        </div>
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">Html</h3>
+                        </div>
+                        <div class="skill-card">
+                           <img src="./assets/html5.png" alt="Skill Image" class="skill-card-image">
+                           <h3 class="skill-card-title">Html</h3>
+                        </div>
                      </div>
-                  </article>
-                  <article>
-                     <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                     <div>
-                        <h3>Node JS</h3>
-                        <p>Intermediate</p>
-                     </div>
-                  </article>
-                  <article>
-                     <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                     <div>
-                        <h3>Express JS</h3>
-                        <p>Intermediate</p>
-                     </div>
-                  </article>
-                  <article>
-                     <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                     <div>
-                        <h3>Git</h3>
-                        <p>Intermediate</p>
-                     </div>
-                  </article>
+                  </div>
+
                </div>
             </div>
          </div>
-      </div>
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+   </div>
    </section>
-   <section class="pop" id="projects">
+   <section class="pop section" id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
@@ -236,9 +264,8 @@
             </div>
          </div>
       </div>
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
    </section>
-   <section class="pop" id="contact">
+   <section class="section" id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
       <div class="contact-info-upper-container">
@@ -264,8 +291,10 @@
          </div>
       </nav>
 
-      <p>Copyright &#169; 2023 Giovani Lamastra. All Rights Reserved.</p>
+      <p>Copyright &#169; Created By Giovani Lamastra.</p>
    </footer>
+   </div>
+
    <script>
 
       // JavaScript to animate role change
@@ -306,12 +335,7 @@
          }, 100);
       }
 
-      function toggleMenu() {
-         const menu = document.querySelector(".menu-links");
-         const icon = document.querySelector(".hamburger-icon");
-         menu.classList.toggle("open");
-         icon.classList.toggle("open");
-      }
+
       function toggleMenu() {
          const menu = document.querySelector(".menu-links");
          const icon = document.querySelector(".hamburger-icon");
@@ -319,6 +343,23 @@
          icon.classList.toggle("open");
       }
 
+      function translateTextElements(element, text) {
+
+
+         element.classList.add('fade-out');
+         setTimeout(() => {
+            element.textContent = text
+
+            element.classList.remove('fade-out');
+            element.classList.add('fade-in');
+
+            setTimeout(() => {
+               element.classList.remove('fade-in');
+            }, 100);
+         }, 300);
+
+
+      }
 
 
 
@@ -352,25 +393,23 @@
       }
 
       function translateById(id, translation) {
-         document.getElementById(id).textContent = translation
+         translateTextElements(document.getElementById(id), translation)
 
       }
       function translateByClassName(className, translation) {
-         document.getElementsByClassName(id).textContent = translation
+         translateTextElements(document.getElementsByClassName(id), translation)
 
       }
       function translateHeader(translations) {
          console.log(translations)
 
          for (var i = 0, len = 3; i < len; i++) {
-            console.log('aaaa', i)
-            document.getElementsByClassName('navAboutText')[i].textContent = translations.HEADER.ABOUT
-            document.getElementsByClassName('navExperienceText')[i].textContent = translations.HEADER.EXPERIENCES
-            document.getElementsByClassName('navProjectsText')[i].textContent = translations.HEADER.PROJECTS
-            document.getElementsByClassName('navContactText')[i].textContent = translations.HEADER.CONTACT
+            translateTextElements(document.getElementsByClassName('navAboutText')[i], translations.HEADER.ABOUT)
+            translateTextElements(document.getElementsByClassName('navExperienceText')[i], translations.HEADER.EXPERIENCES)
+            translateTextElements(document.getElementsByClassName('navProjectsText')[i], translations.HEADER.PROJECTS)
+            translateTextElements(document.getElementsByClassName('navContactText')[i], translations.HEADER.CONTACT)
 
          }
-
 
       }
       function translateHome(translations) {
@@ -379,6 +418,30 @@
 
 
       }
+
+      // Function to update the text content with animation when the language changes
+      function updateTextContentWithAnimation(newText) {
+         const textContainer = document.getElementsByClassName('navContactText')[0];
+
+
+         // Add a class to trigger the animation
+         textContainer.classList.add('animate-text-out');
+
+         // Wait for the animation to complete before updating the text content
+         setTimeout(() => {
+            // Update the text content with the new text
+            document.getElementsByClassName('navContactText').textContent = newText;
+
+            // Remove the class to trigger the animation in reverse
+            textContainer.classList.remove('animate-text-out');
+
+            // Add a class to trigger the animation for the new text
+            textContainer.classList.add('animate-text-in');
+         }, 500); // Adjust the delay based on the duration of the animation (500ms in this example)
+      }
+
+      // Example usage: call this function when the language changes
+      updateTextContentWithAnimation("New Language Text");
 
       // Update language selection based on URL or default to English
       function updateLanguage() {
@@ -419,6 +482,41 @@
       }
 
 
+
+
+
+      // Function to check if any part of an element is in the viewport
+      function isInViewport(element) {
+         var rect = element.getBoundingClientRect();
+         return (
+            rect.bottom > 0 &&
+            rect.top < window.innerHeight - 120
+         );
+      }
+
+
+      // Function to handle scroll events
+      function handleScroll() {
+         var sections = document.querySelectorAll('.section');
+         sections.forEach(function (section) {
+            if (isInViewport(section)) {
+               section.classList.add('visible');
+            } else {
+               section.classList.remove('visible');
+            }
+         });
+      }
+
+      // Add scroll event listener to trigger the handleScroll function
+      window.addEventListener('scroll', function () {
+         handleScroll();
+      });
+
+      // Call handleScroll once on page load to initialize section visibility
+      handleScroll();
+
+
+
       // Load translations when the page loads
       window.onload = function () {
          updateLanguage(); // Update language based on URL
@@ -431,23 +529,42 @@
 
 
 
-      function toggleAnimation(entries, observer) {
-         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-               entry.target.classList.add('pop');
-            } else {
-               entry.target.classList.remove('pop');
-            }
-         });
+
+      // function toggleAnimation(entries, observer) {
+      //    entries.forEach(entry => {
+      //       if (entry.isIntersecting) {
+      //          entry.target.classList.add('pop');
+      //       } else {
+      //          entry.target.classList.remove('pop');
+      //       }
+      //    });
+      // }
+
+      // // Create a new Intersection Observer
+      // const observer = new IntersectionObserver(toggleAnimation, { threshold: 0.5 });
+
+      // // Observe each section
+      // document.querySelectorAll('.pop').forEach(section => {
+      //    observer.observe(section);
+      // });
+
+
+      // Function to hide loading spinner and reveal content with a transition
+      function hideLoadingWithTransition() {
+         document.getElementById('loading-spinner').style.opacity = '0'; // Hide loading spinner
+         setTimeout(function () {
+            document.getElementById('loading-spinner').style.display = 'none'; // Hide loading spinner after transition
+            document.getElementById('content').style.opacity = '1'; // Show content with transition
+         }, 550); // Adjust the transition delay as needed (in milliseconds)
       }
 
-      // Create a new Intersection Observer
-      const observer = new IntersectionObserver(toggleAnimation, { threshold: 0.5 });
-
-      // Observe each section
-      document.querySelectorAll('.pop').forEach(section => {
-         observer.observe(section);
+      // Call hideLoadingWithTransition() function when the page has fully loaded
+      window.addEventListener('load', function () {
+         hideLoadingWithTransition();
       });
+
+
+
    </script>
 
 

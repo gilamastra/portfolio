@@ -15,10 +15,10 @@
       <div class="logo">Giovani Lamastra</div>
       <div>
          <ul class="nav-links">
-            <li><a id="navAboutText" href="#about" onclick="toggleMenu()"></a></li>
-            <li><a id="navExperienceText" href="#experience" onclick="toggleMenu()"></a></li>
-            <li><a id=" navProjectsText" href="#projects" onclick="toggleMenu()"></a></li>
-            <li><a id="navContactText" href="#contact" onclick="toggleMenu()"></a></li>
+            <li><a class="navAboutText" id="navAboutText" href="#about" onclick="toggleMenu()"></a></li>
+            <li><a class="navExperienceText" href="#experience" onclick="toggleMenu()"></a></li>
+            <li><a class="navProjectsText" href="#projects" onclick="toggleMenu()"></a></li>
+            <li><a class="navContactText" href="#contact" onclick="toggleMenu()"></a></li>
          </ul>
       </div>
       <div class="styled-select">
@@ -37,10 +37,10 @@
             <span></span>
          </div>
          <div class="menu-links">
-            <li><a id="navAboutText" href="#about" onclick="toggleMenu()"></a></li>
-            <li><a id="navExperienceText" href="#experience" onclick="toggleMenu()"></a></li>
-            <li><a id=" navProjectsText" href="#projects" onclick="toggleMenu()"></a></li>
-            <li><a id="navContactText" href="#contact" onclick="toggleMenu()"></a></li>
+            <li><a class="navAboutText" href="#about" onclick="toggleMenu()"></a></li>
+            <li><a class="navExperienceText" href="#experience" onclick="toggleMenu()"></a></li>
+            <li><a class="navProjectsText" href="#projects" onclick="toggleMenu()"></a></li>
+            <li><a class="navContactText" href="#contact" onclick="toggleMenu()"></a></li>
          </div>
       </div>
    </nav>
@@ -256,10 +256,10 @@
       <nav>
          <div class="nav-links-container">
             <ul class="nav-links">
-               <li><a href="#about">About</a></li>
-               <li><a href="#experience">Experience</a></li>
-               <li><a href="#projects">Projects</a></li>
-               <li><a href="#contact">Contact</a></li>
+               <li><a class="navAboutText" href="#about">About</a></li>
+               <li><a class="navExperienceText" href="#experience">Experience</a></li>
+               <li><a class="navProjectsText" href="#projects">Projects</a></li>
+               <li><a class="navContactText" href="#contact">Contact</a></li>
             </ul>
          </div>
       </nav>
@@ -267,6 +267,7 @@
       <p>Copyright &#169; 2023 Giovani Lamastra. All Rights Reserved.</p>
    </footer>
    <script>
+
       // JavaScript to animate role change
       let typingInterval = null;
       let backspacingInterval = null;
@@ -349,10 +350,32 @@
          // Set the selected language
          languagesSelect.value = selectedLanguageValue;
       }
+
+      function translateById(id, translation) {
+         document.getElementById(id).textContent = translation
+
+      }
+      function translateByClassName(className, translation) {
+         document.getElementsByClassName(id).textContent = translation
+
+      }
+      function translateHeader(translations) {
+         console.log(translations)
+
+         for (var i = 0, len = 3; i < len; i++) {
+            console.log('aaaa', i)
+            document.getElementsByClassName('navAboutText')[i].textContent = translations.HEADER.ABOUT
+            document.getElementsByClassName('navExperienceText')[i].textContent = translations.HEADER.EXPERIENCES
+            document.getElementsByClassName('navProjectsText')[i].textContent = translations.HEADER.PROJECTS
+            document.getElementsByClassName('navContactText')[i].textContent = translations.HEADER.CONTACT
+
+         }
+
+
+      }
       function translateHome(translations) {
-         console.log(translations, 'HOME TRANSLATOOOOOOOOOOOOOOO')
-         var introductionText = document.getElementById("introductionText");
-         introductionText.textContent = translations.HOME.INTRODUCTION_TEXT
+
+         translateById('introductionText', translations.HOME.INTRODUCTION_TEXT)
 
 
       }
@@ -379,6 +402,7 @@
          loadTranslations(selectedLanguageValue)
             .then(translations => {
                translateOptions(translations, selectedLanguageValue); // Translate options in the language dropdown
+               translateHeader(translations); // Translate home
                translateHome(translations); // Translate home
                updateRole(translations)
             })

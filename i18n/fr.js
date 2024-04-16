@@ -5,6 +5,12 @@ export default {
       pt: "Portugais",
       fr: "Français",
    },
+   HEADER: {
+      ABOUT: "Sobre",
+      EXPERIENCES: "Experiencias",
+      PROJECTS: "Projetos",
+      CONTACT: "Contato",
+   },
    HOME: {
       INTRODUCTION_TEXT: "Salut, Je m'appelle",
       ROLES: [

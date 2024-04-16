@@ -5,6 +5,12 @@ export default {
       pt: "Portuguese",
       fr: "French",
    },
+   HEADER: {
+      ABOUT: "About",
+      EXPERIENCES: "Experiences",
+      PROJECTS: "Projects",
+      CONTACT: "Contact",
+   },
    HOME: {
       INTRODUCTION_TEXT: "Hello, I'm",
       ROLES: [
@@ -13,7 +19,7 @@ export default {
          "Mobile Developer",
          "Fullstack Developer",
       ],
-      DOWNLOAD_CV: "",
-      CONTACT_INFO: "",
+      DOWNLOAD_CV: "Download CV",
+      CONTACT_INFO: "Contact Info",
    },
 };
